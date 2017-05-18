@@ -1,10 +1,10 @@
 <?php
 
-function getAllStudents() 
+function getAllBirthdays() 
 {
 	$db = openDatabaseConnection();
 
- 	$sql = "SELECT * FROM students";
+ 	$sql = "SELECT * FROM birthdays";
     $query = $db->prepare($sql);
     $query->execute();
 
@@ -13,22 +13,22 @@ function getAllStudents()
 	return $query->fetchAll();
 }
 
-function getStudent() 
+function getBirthday() 
 {
 
 }
 
-function createStudent() 
+function createBirthday() 
 {
 
 }
 
-function deleteStudent() 
+function deleteBirthday() 
 {
 
 }
 
-function editStudent() 
+function editBirthday() 
 {
 
 }
