@@ -18,7 +18,8 @@ function show($publishers_id){
 }
 function create() 
 {
-
+insert ("games/show", array (
+   "games"=> getGamesFromPublisher($publishers_id)));
 }
 function createSave()
 {
