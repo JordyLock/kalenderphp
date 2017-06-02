@@ -18,12 +18,11 @@ function show($publishers_id){
 }
 function create() 
 {
-insert ("games/show", array (
-   "games"=> getGamesFromPublisher($publishers_id)));
+render ("games/create");
 }
-function createSave()
+function createsave()
 {
-	# code...
+	render ("games/create");
 }
 
 function edit($id)

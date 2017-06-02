@@ -1,9 +1,9 @@
 <?php
 
-function index() 
-{
-	echo "Probleem! 404 ofzo.";
-}
+// function index() 
+// {
+// 	echo "Probleem! 404 ofzo.";
+// }
 
 function error404() 
 {
