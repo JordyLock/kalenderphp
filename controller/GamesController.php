@@ -27,7 +27,7 @@ function show($publishers_id){
 		
 		$result = createGame($name, $price, $publishers_id);
 
-		if($result == "Successfully")
+		if($result == "Success")
 		{
 			header('location: /games');
 		}
@@ -35,3 +35,22 @@ function show($publishers_id){
 }
 
 
+
+
+function edit($id){
+	render('games/edit', array(
+		"games" => takeGame($id)
+		));
+
+}
+function editSave(){
+
+	$id = $_POST["id"];
+	$games = $_POST["name"];
+	$publishers_id = $_POST["publishers_id"];
+	$price = $_POST["price"];
+	$result = editGame($id, $games, $publishers_id, $price);
+	if ($result == "Yes") {
+		header('location: /games');
+	}
+}
