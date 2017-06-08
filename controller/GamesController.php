@@ -16,30 +16,22 @@ function show($publishers_id){
 
 
 }
-function create() 
+	function create() 
 {
-render ("games/create");
-}
-function createsave()
-{
-	render ("games/create");
+	render("games/create");
+	if (isset( $_POST['name'])) 
+	{
+		$name = $_POST['name'];
+		$price = $_POST['price'];
+		$publishers_id = $_POST['publishers_id'];
+		
+		$result = createGame($name, $price, $publishers_id);
+
+		if($result == "Successfully")
+		{
+			header('location: /games');
+		}
+	}
 }
 
-function edit($id)
-{
 
-}
-
-function editSave()
-{
-
-}
-
-function delete()
-{
-
-}
-function deleteSave()
-{
-	# code...
-}

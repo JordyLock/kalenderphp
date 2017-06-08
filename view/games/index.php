@@ -18,7 +18,7 @@
 	<tr>
 		<td><?= $publisher["publisher"]; ?></td>
 		<td><?php echo '<a href="' . 'games/show/' . $publisher['id'] . '">Show</a>';  ?></td>
-		<td><?php echo '<a href="' . 'games/create/' . $publisher['id'] . '">Add</a>';  ?></td>
+		<td><?php echo '<a href="' . 'games/create/' . '">Add</a>';  ?></td>
 	</tr>
 	<?php } ?>
 </table>
