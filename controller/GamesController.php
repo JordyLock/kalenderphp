@@ -54,3 +54,13 @@ function editSave(){
 		header('location: /games');
 	}
 }
+
+function delete($id){
+
+	$result	 = deleteGame($id);
+
+	if ($result == "yes") {
+
+		header('location: /games');
+	}
+}

@@ -47,8 +47,19 @@ function takeGame($id){
 
     return $query->fetch(PDO::FETCH_ASSOC);
 }
-function deleteGame() 
+function deleteGame($id) 
 {
+$db = openDatabaseConnection();
+
+$sgl = "DELETE FROM games_db WHERE id =(:id)";
+$query = $db->prepare($sgl);
+$query->bindParam(':id', $id);
+$query->execute();
+$db = null;
+return "yes";
+
+
+
 
 }
 
